@@ -1,0 +1,5 @@
+wp-config.php
+.htaccess
+*.log
+.DS_Store
+.env
