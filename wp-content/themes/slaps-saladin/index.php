@@ -107,6 +107,9 @@
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </section>
+	<section class="contact-section" id="contact2">
+        <?php echo do_shortcode('[contact-form-7 id="25fc8ae" title="Contact form 1"]'); ?>
+	</section>
 
     <!-- Footer -->
     <footer class="footer">
