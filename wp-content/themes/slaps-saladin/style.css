@@ -249,7 +249,9 @@ body {
   font-family: inherit;
   font-size: 1rem;
   background: white;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .form-group input:focus,
@@ -274,10 +276,59 @@ body {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .submit-btn:hover {
+  background: var(--accent-green-light);
+  transform: translateY(-1px);
+}
+
+/* Custom Contact Form 7 */
+.custom-cf7 .wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.custom-cf7 label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.custom-cf7 span.wpcf7-form-control-wrap input,
+.custom-cf7 span.wpcf7-form-control-wrap textarea  {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: white;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.custom-cf7 .wpcf7-submit {
+  padding: 0.875rem 2rem;
+  background: var(--accent-green);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+  width: 100%;
+}
+.custom-cf7 .wpcf7-submit:hover {
   background: var(--accent-green-light);
   transform: translateY(-1px);
 }

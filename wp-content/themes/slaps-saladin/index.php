@@ -80,34 +80,8 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contact">
+	<section class="contact-section custom-cf7" id="contact">
         <h2 class="section-title">Get in Touch</h2>
-
-        <form class="contact-form" id="contact-form">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" id="title" name="title" placeholder="Subject of your message" required>
-            </div>
-
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required>
-            </div>
-
-            <div class="form-group">
-                <label for="content">Message</label>
-                <textarea id="content" name="content" placeholder="Share your thoughts, ideas, or just say hello..." required></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-    </section>
-	<section class="contact-section" id="contact2">
         <?php echo do_shortcode('[contact-form-7 id="25fc8ae" title="Contact form 1"]'); ?>
 	</section>
 
