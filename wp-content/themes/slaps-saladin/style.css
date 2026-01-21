@@ -300,7 +300,7 @@ body {
 }
 
 .custom-cf7 span.wpcf7-form-control-wrap input,
-.custom-cf7 span.wpcf7-form-control-wrap textarea  {
+.custom-cf7 span.wpcf7-form-control-wrap textarea {
   padding: 0.75rem 1rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -331,6 +331,20 @@ body {
 .custom-cf7 .wpcf7-submit:hover {
   background: var(--accent-green-light);
   transform: translateY(-1px);
+}
+
+.custom-cf7 .wpcf7 form.sent .wpcf7-response-output {
+  text-align: center;
+  border: 0;
+  color: var(--accent-green);
+}
+
+.custom-cf7 .wpcf7 form.invalid .wpcf7-response-output,
+.custom-cf7 .wpcf7 form.unaccepted .wpcf7-response-output,
+.custom-cf7 .wpcf7 form.payment-required .wpcf7-response-output {
+  text-align: center;
+  border: 0;
+  color: #dc3232;
 }
 
 /* Footer */
