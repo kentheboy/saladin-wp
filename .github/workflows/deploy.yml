@@ -16,7 +16,8 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
         script: |
-          cd /var/www/saladin
-          git config --global --add safe.directory /var/www/saladin
-          git checkout main
-          git pull origin main
+            cd /var/www/saladin
+            git config --global --add safe.directory /var/www/saladin
+            git remote set-url origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
+            git checkout main
+            git pull origin main
