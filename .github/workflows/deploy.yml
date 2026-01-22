@@ -17,5 +17,6 @@ jobs:
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
         script: |
           cd /var/www/saladin
+          git config --global --add safe.directory /var/www/saladin
           git checkout main
           git pull origin main
