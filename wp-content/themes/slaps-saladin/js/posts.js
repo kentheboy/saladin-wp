@@ -33,7 +33,9 @@ async function loadCategories() {
 
   // 2. Load posts only after categories are ready
   const posts = await loadPosts().catch(console.error);
+  let displayedPostCount = 0;
   posts.forEach((post) => {
+    if (displayedPostCount >= 5) return; // Limit to 5 posts
     const postEl = document.createElement("article");
     postEl.className = "timeline-item";
     const formattedDate = new Date(post.date).toLocaleString("en-US", { month: "long", year: "numeric" });
@@ -44,5 +46,6 @@ async function loadCategories() {
       ${post.excerpt.rendered}
     `;
     document.querySelector("#timeline").appendChild(postEl);
+    displayedPostCount++;
   });
 })();
