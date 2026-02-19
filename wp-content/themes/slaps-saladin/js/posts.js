@@ -49,4 +49,27 @@ async function loadCategories() {
     document.querySelector("#timeline").appendChild(postEl);
     displayedPostCount++;
   });
+
+  // 3. Add filter button listeners after posts are rendered
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      if (e.target.dataset.filter) {
+        const filter = e.target.dataset.filter;
+        document.querySelectorAll(".timeline-item").forEach((item) => {
+          if (filter === "all" || item.dataset.category.includes(filter)) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Highlight active button and reset others
+        e.target.className = "filter-btn active";
+        document.querySelectorAll(".filter-btn").forEach((otherBtn) => {
+          if (otherBtn !== e.target) otherBtn.className = "filter-btn";
+        });
+      }
+    });
+  });
+
 })();

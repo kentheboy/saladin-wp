@@ -39,7 +39,6 @@
         </div>
 
         <div class="timeline" id="timeline">
-            
         </div>
     </section>
 
