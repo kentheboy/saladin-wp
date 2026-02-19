@@ -28,7 +28,7 @@ async function loadCategories() {
     btn.dataset.filter = category.slug;
     btn.textContent = category.name;
     document.querySelector(".filter-buttons").appendChild(btn);
-    categoryList.push({ id: category.id, name: category.name });
+    categoryList.push({ id: category.id, name: category.name, slug: category.slug });
   });
 
   // 2. Load posts only after categories are ready
@@ -38,6 +38,7 @@ async function loadCategories() {
     if (displayedPostCount >= 5) return; // Limit to 5 posts
     const postEl = document.createElement("article");
     postEl.className = "timeline-item";
+    postEl.dataset.category = post.categories.map(id => categoryList.find(c => c.id === id)?.slug).join(" ");
     const formattedDate = new Date(post.date).toLocaleString("en-US", { month: "long", year: "numeric" });
     postEl.innerHTML = `
       <div class="timeline-date">${formattedDate}</div>
