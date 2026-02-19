@@ -36,46 +36,10 @@
 
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">🌿 All</button>
-            <button class="filter-btn" data-filter="code">💻 Code</button>
-            <button class="filter-btn" data-filter="life">🌍 Life</button>
-            <button class="filter-btn" data-filter="design">✨ Design</button>
         </div>
 
         <div class="timeline" id="timeline">
-            <article class="timeline-item" data-category="code">
-                <div class="timeline-date">December 2024</div>
-                <span class="timeline-category">💻 Code</span>
-                <h3 class="timeline-title">Building My First Vue Application</h3>
-                <p class="timeline-excerpt">Exploring the reactive ecosystem of Vue.js and how it mirrors the organic growth patterns I see in nature...</p>
-            </article>
-
-            <article class="timeline-item" data-category="life">
-                <div class="timeline-date">November 2024</div>
-                <span class="timeline-category">🌍 Life</span>
-                <h3 class="timeline-title">Embracing Chaos in Creative Work</h3>
-                <p class="timeline-excerpt">Reflections on how accepting uncertainty has transformed my approach to problem-solving and design...</p>
-            </article>
-
-            <article class="timeline-item" data-category="design">
-                <div class="timeline-date">October 2024</div>
-                <span class="timeline-category">✨ Design</span>
-                <h3 class="timeline-title">The Aesthetics of Urban Jungle</h3>
-                <p class="timeline-excerpt">Finding inspiration in the chaotic beauty of city life and translating it into digital experiences...</p>
-            </article>
-
-            <article class="timeline-item" data-category="code">
-                <div class="timeline-date">September 2024</div>
-                <span class="timeline-category">💻 Code</span>
-                <h3 class="timeline-title">CSS Grid: Taming the Wild Layout</h3>
-                <p class="timeline-excerpt">How modern CSS techniques help create order from the chaos of responsive design requirements...</p>
-            </article>
-
-            <article class="timeline-item" data-category="life">
-                <div class="timeline-date">August 2024</div>
-                <span class="timeline-category">🌍 Life</span>
-                <h3 class="timeline-title">Cultural Roots in Digital Soil</h3>
-                <p class="timeline-excerpt">Exploring how my Asian-African heritage influences my perspective on technology and creativity...</p>
-            </article>
+            
         </div>
     </section>
 
@@ -192,11 +156,5 @@
     window.addEventListener('scroll', updateFloatingButton);
     updateFloatingButton();
 
-    // Form submission
-    document.getElementById('contact-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for your message! I will get back to you soon.');
-        e.target.reset();
-    });
 </script>
 <?php get_footer(); ?>
